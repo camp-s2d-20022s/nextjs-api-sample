@@ -19,7 +19,7 @@ export default function Home({posts}) {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <ul>
-          {posts.map((post) => {
+          {posts.results.map((post) => {
             return (
               <li key={post.id}>
                 <Link href={`/posts/${post.id}`}>{post.title}</Link>

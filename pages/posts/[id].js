@@ -3,7 +3,7 @@ export async function getStaticPaths() {
     const posts = await res.json()
 
     // const paths = [{params: { id: "1" }}, {params: { id: "2" }}]
-    const paths = posts.map((post) => {
+    const paths = posts.results.map((post) => {
         return {params: { id: post.id.toString() }}
     })
 
